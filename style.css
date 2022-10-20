@@ -1,0 +1,165 @@
+:root{
+    --input-borda: linear-gradient(120deg, #00ff15, #0077ff);
+    --button-enviar: linear-gradient(120deg, #1eff00, #0c8f00);
+    --input-cancelar: red;
+    --white: #fff;
+    --black: #000000;
+    --blue: #0099ff;
+    --lightgray: #cfcfcf;
+    --green: #2bff00;
+}
+body{
+    background: gray;
+}
+.formulario{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario_container{
+    min-height: 400px;
+    width: 300px;
+    background-color: var(--white);
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: 2s;
+}
+
+.formulario_titulo{
+    margin-bottom: 32px; 
+    color: var(--black);
+    text-align: center;
+ }
+ 
+ .login_formulario{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .login_input{
+     height: 48px;
+     width: 100%;
+     box-sizing: border-box;
+     padding-left: 8px;
+     border: unset;
+     outline: none;
+ }
+ 
+ .login_borda{
+     height: 1px;
+     width: 100%;
+     margin-bottom: 16px;
+     background-color: var(--lightgray);
+     transition: .3s ease-in-out;
+ }
+ 
+ .login_borda::after{
+     content: '';
+     display: block;
+     height: 1px;
+     width: 0;
+     margin-bottom: 16px;
+     background: var(--input-borda);
+     transition: .3s ease-in-out;
+ }
+
+ .login_input:focus + .login_borda::after{
+    width: 100%;
+}
+
+.enviar_cancelar{
+    display: flex;
+    width: 100%;
+    
+}
+
+.login_cancelar{
+    background: var(--input-cancelar);
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    height: 48px;
+    width: 50%;
+    margin-left: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: unset;
+    transition: 0.5s ease-in-out;
+}
+
+.login_enviar{
+    background: var(--button-enviar);
+    height: 48px;
+    width: 50%;
+    padding-left: 8px;
+    position: relative;
+    background-size: 200%;
+    margin-bottom: 32px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+/*Style do arquivo bem-vindo.html*/
+
+.borda_bemvindo{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bemvindo_container{
+    background-color: var(--white);
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: 2s;
+}
+
+.bemvindo_titulo{
+   color: var(--black)
+    
+   
+}
+
+.bemvindo_mensagem{
+    
+    font-size: 20px;
+    font-weight: lighter;
+   
+}
+
+.linha{
+    color: black;
+    width: 100%;
+}
+
+
+.btn-voltar{
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+    background-color: var(--black)
+}
